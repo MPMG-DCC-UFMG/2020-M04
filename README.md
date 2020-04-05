@@ -36,4 +36,4 @@ O módulo implementado gera um arquivo __results_fileName.json__ para um determi
 
 O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_score_) e um _ranking_ baseado na conotação (_Extremely Negative, Negative, Neutro, Positive, Extremely Positive_).
 
-O programa gera ainda um arquivo __M04.log__ contendo as informações de log referente as execuções do mesmo. Caso a opção -t seja definida pelo usuário para executar o programa, o arquivo de log contém o resultado da anlise de sentimentos para o texto requerido.
+O programa gera ainda um arquivo __M04.log__ contendo as informações de logging referentes as execuções do mesmo. Caso o usuário opte pela entrada de texto (--text), o arquivo de log armazena os dados da sentença e os resultados correspondentes.
