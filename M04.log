@@ -1,0 +1,11 @@
+05-Apr-20 18:41:31 - root - INFO - Perform VADER sentiment analysis for --text "I hate you! :("
+05-Apr-20 18:41:31 - root - INFO - {'polarity': {'score': -0.784, 'ranking': 'Extremely Negative'}}
+05-Apr-20 18:42:42 - root - ERROR - BadOptionError
+05-Apr-20 18:43:07 - root - INFO - Perform VADER sentiment analysis for --filename file.txt
+05-Apr-20 18:43:07 - root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "vader.py", line 62, in main
+    input_file = open(options.filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'file.txt'
+05-Apr-20 18:43:34 - root - INFO - Perform VADER sentiment analysis for --filename example.txt
+05-Apr-20 18:43:38 - root - INFO - File results_example.json successfully generated

@@ -1,0 +1,1957 @@
+[{
+  "sentence": "Pleasant 10 min walk along the sea front to the Water Bus, restaurants etc.",
+  "position": {
+    "start": 0,
+    "end": 75,
+    "length": 75
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Hotel was comfortable breakfast was good - quite a variety.",
+  "position": {
+    "start": 76,
+    "end": 135,
+    "length": 59
+  },
+  "polarity": {
+    "score": 0.7351,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Room aircon didn't work very well.",
+  "position": {
+    "start": 136,
+    "end": 170,
+    "length": 34
+  },
+  "polarity": {
+    "score": -0.2572,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "Take mosquito repelant!",
+  "position": {
+    "start": 171,
+    "end": 194,
+    "length": 23
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Really lovely hotel.",
+  "position": {
+    "start": 195,
+    "end": 215,
+    "length": 20
+  },
+  "polarity": {
+    "score": 0.624,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Stayed on the very top floor and were surprised by a Jacuzzi bath we didn't know we were getting!",
+  "position": {
+    "start": 216,
+    "end": 313,
+    "length": 97
+  },
+  "polarity": {
+    "score": 0.5081,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Staff were friendly and helpful and the included breakfast was great!",
+  "position": {
+    "start": 314,
+    "end": 383,
+    "length": 69
+  },
+  "polarity": {
+    "score": 0.8858,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Great location and great value for money.",
+  "position": {
+    "start": 384,
+    "end": 425,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0.891,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Didn't want to leave!",
+  "position": {
+    "start": 426,
+    "end": 447,
+    "length": 21
+  },
+  "polarity": {
+    "score": -0.0941,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "We stayed here for four nights in October.",
+  "position": {
+    "start": 448,
+    "end": 490,
+    "length": 42
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The hotel staff were welcoming, friendly and helpful.",
+  "position": {
+    "start": 491,
+    "end": 544,
+    "length": 53
+  },
+  "polarity": {
+    "score": 0.836,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Assisted in booking tickets for the opera.",
+  "position": {
+    "start": 545,
+    "end": 587,
+    "length": 42
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The rooms were clean and comfortable- good shower, light and airy rooms with windows you could open wide.",
+  "position": {
+    "start": 588,
+    "end": 693,
+    "length": 105
+  },
+  "polarity": {
+    "score": 0.836,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Beds were comfortable.",
+  "position": {
+    "start": 694,
+    "end": 716,
+    "length": 22
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Plenty of choice for breakfast.Spa at hotel nearby which we used while we were there.",
+  "position": {
+    "start": 717,
+    "end": 802,
+    "length": 85
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We stayed here for four nights in October.",
+  "position": {
+    "start": 803,
+    "end": 845,
+    "length": 42
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The hotel staff were welcoming, friendly and helpful.",
+  "position": {
+    "start": 846,
+    "end": 899,
+    "length": 53
+  },
+  "polarity": {
+    "score": 0.836,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Assisted in booking tickets for the opera.",
+  "position": {
+    "start": 900,
+    "end": 942,
+    "length": 42
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The rooms were clean and comfortable- good shower, light and airy rooms with windows you could open wide.",
+  "position": {
+    "start": 943,
+    "end": 1048,
+    "length": 105
+  },
+  "polarity": {
+    "score": 0.836,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Beds were comfortable.",
+  "position": {
+    "start": 1049,
+    "end": 1071,
+    "length": 22
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Plenty of choice for breakfast.Spa at hotel nearby which we used while we were there.",
+  "position": {
+    "start": 1072,
+    "end": 1157,
+    "length": 85
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We loved staying on the island of Lido!",
+  "position": {
+    "start": 1158,
+    "end": 1197,
+    "length": 39
+  },
+  "polarity": {
+    "score": 0.636,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "You need to take a water is from Venice to get there.",
+  "position": {
+    "start": 1198,
+    "end": 1251,
+    "length": 53
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "From the train station, a boat ride takes 45 minutes but has beautiful views along the way.",
+  "position": {
+    "start": 1252,
+    "end": 1343,
+    "length": 91
+  },
+  "polarity": {
+    "score": 0.7469,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Hotel is an EASY walk from the boat dock.",
+  "position": {
+    "start": 1344,
+    "end": 1385,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0.5622,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The room was very clean and the breakfast was plentiful.",
+  "position": {
+    "start": 1386,
+    "end": 1442,
+    "length": 56
+  },
+  "polarity": {
+    "score": 0.4576,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "We would definitely recommend this hotel!",
+  "position": {
+    "start": 1443,
+    "end": 1484,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0.6696,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Lovely view out onto the lagoon.",
+  "position": {
+    "start": 1485,
+    "end": 1517,
+    "length": 32
+  },
+  "polarity": {
+    "score": 0.5859,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Excellent view.",
+  "position": {
+    "start": 1518,
+    "end": 1533,
+    "length": 15
+  },
+  "polarity": {
+    "score": 0.5719,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Staff were welcoming and helpful.",
+  "position": {
+    "start": 1534,
+    "end": 1567,
+    "length": 33
+  },
+  "polarity": {
+    "score": 0.6908,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "It was ok hotel is nice from in and out but room was small we paid for double bed bat they atteched 2 single bed\nThe hotel staff was very friendly and helpful.",
+  "position": {
+    "start": 1568,
+    "end": 1727,
+    "length": 159
+  },
+  "polarity": {
+    "score": 0.9069,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The room was clean and comfortable.",
+  "position": {
+    "start": 1728,
+    "end": 1763,
+    "length": 35
+  },
+  "polarity": {
+    "score": 0.7184,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "My wife and I had a room with a terrace over looking the water...it was a great view!",
+  "position": {
+    "start": 1764,
+    "end": 1849,
+    "length": 85
+  },
+  "polarity": {
+    "score": 0.6588,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "I will look to stay at this hotel my next time in Venice...very pleased.",
+  "position": {
+    "start": 1850,
+    "end": 1922,
+    "length": 72
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Nice hotel , with very friendly staff and helpful - great choice for breakfast , something for everyone.",
+  "position": {
+    "start": 1923,
+    "end": 2027,
+    "length": 104
+  },
+  "polarity": {
+    "score": 0.9216,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "DON'T stay here unless you're less than 2 feet tall or like sleeping with centipedes.",
+  "position": {
+    "start": 2028,
+    "end": 2113,
+    "length": 85
+  },
+  "polarity": {
+    "score": 0.3612,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Our 4th floor room was an attic with a vaulted ceiling that angles down to 3ft.",
+  "position": {
+    "start": 2114,
+    "end": 2193,
+    "length": 79
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The bed is only accessible from one side.",
+  "position": {
+    "start": 2194,
+    "end": 2235,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "If you placed your head in the skylight on the other side you might able sit up.",
+  "position": {
+    "start": 2236,
+    "end": 2316,
+    "length": 80
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The bathtub was impractical with broken shower head.",
+  "position": {
+    "start": 2317,
+    "end": 2369,
+    "length": 52
+  },
+  "polarity": {
+    "score": -0.4767,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "We moved to the 1st floor the next day and within minutes found a centipede on the wall and15 flies.",
+  "position": {
+    "start": 2370,
+    "end": 2470,
+    "length": 100
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We asked for a broom to get rid of the centipede.",
+  "position": {
+    "start": 2471,
+    "end": 2520,
+    "length": 49
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Later in the day the receptionist said she gave us something to control the bugs.",
+  "position": {
+    "start": 2521,
+    "end": 2602,
+    "length": 81
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We never complained about the drain flies so she must have noticed a problem.",
+  "position": {
+    "start": 2603,
+    "end": 2680,
+    "length": 77
+  },
+  "polarity": {
+    "score": -0.1134,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "That night we spent 2 hrs catching 6 centipedes in our room.",
+  "position": {
+    "start": 2681,
+    "end": 2741,
+    "length": 60
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "2 came from throw pillows.",
+  "position": {
+    "start": 2742,
+    "end": 2768,
+    "length": 26
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We asked reception for a new room or hotel but there supposedly weren't any hotels with open rooms and if we wanted leave we would have to pay for transportation and both hotels.",
+  "position": {
+    "start": 2769,
+    "end": 2947,
+    "length": 178
+  },
+  "polarity": {
+    "score": -0.2263,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "The next morning we went to reception to tell them about the bug problem.",
+  "position": {
+    "start": 2948,
+    "end": 3021,
+    "length": 73
+  },
+  "polarity": {
+    "score": -0.4019,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "We barely said anything before the woman apologized and said they didn't put the bugs in the room on purpose so we should just go about our day and forget it.",
+  "position": {
+    "start": 3022,
+    "end": 3180,
+    "length": 158
+  },
+  "polarity": {
+    "score": 0.1027,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "She added that she often goes on vacation with her children and sometimes things happen, so she tries to make the best of everything and not start a war.",
+  "position": {
+    "start": 3181,
+    "end": 3334,
+    "length": 153
+  },
+  "polarity": {
+    "score": 0.8098,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Adding, a few euros isn't going to make anything go away so we should just go enjoy the day because more we talk the less time we have.",
+  "position": {
+    "start": 3335,
+    "end": 3470,
+    "length": 135
+  },
+  "polarity": {
+    "score": 0.4939,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "We had absolutely no problems whatsoever with this hotel and were very pleasantly surprised by the quality considering the low price.",
+  "position": {
+    "start": 3471,
+    "end": 3604,
+    "length": 133
+  },
+  "polarity": {
+    "score": -0.25,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "The dcor of the room was pleasant and flawless, unlike many of the Venice hotels I've stayed in.",
+  "position": {
+    "start": 3605,
+    "end": 3701,
+    "length": 96
+  },
+  "polarity": {
+    "score": 0.765,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The breakfast buffet was delicious too.",
+  "position": {
+    "start": 3702,
+    "end": 3741,
+    "length": 39
+  },
+  "polarity": {
+    "score": 0.5719,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "And to finish all this off, the staff couldn't have been friendlier or more helpful.",
+  "position": {
+    "start": 3742,
+    "end": 3826,
+    "length": 84
+  },
+  "polarity": {
+    "score": 0.1563,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "In terms of location, the hotel is about 10 minutes walk from the Lido waterbus stop, then a boat takes around 15 mins to get into Venice.",
+  "position": {
+    "start": 3827,
+    "end": 3965,
+    "length": 138
+  },
+  "polarity": {
+    "score": -0.296,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "We didn't find this a problem at all - we knew this was going to be the case so had pre-booked transport tickets to save money.",
+  "position": {
+    "start": 3966,
+    "end": 4093,
+    "length": 127
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The surrounding Lido is pleasant and worth an explore in a spare couple of hours.",
+  "position": {
+    "start": 4094,
+    "end": 4175,
+    "length": 81
+  },
+  "polarity": {
+    "score": 0.6369,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "In conclusion, I would book this again due to the fantastic quality of the hotel, despite the trade-off of not being in Venice itself.",
+  "position": {
+    "start": 4176,
+    "end": 4310,
+    "length": 134
+  },
+  "polarity": {
+    "score": 0.5574,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Lovely hotel, 10 min walk to the water bus stop on lido.",
+  "position": {
+    "start": 4311,
+    "end": 4367,
+    "length": 56
+  },
+  "polarity": {
+    "score": 0.3818,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Away from the madness of Venice, but close enough to be there in less than 20 minutes.",
+  "position": {
+    "start": 4368,
+    "end": 4454,
+    "length": 86
+  },
+  "polarity": {
+    "score": -0.2382,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "Located on the Lido I would recommend this hotel if you require a little piece and quiet after the busy day's in Venice, facility's good, staff very friendly and very helpful.",
+  "position": {
+    "start": 4455,
+    "end": 4630,
+    "length": 175
+  },
+  "polarity": {
+    "score": 0.8998,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "I requested flowers for the room as it was one of my wife's special birthday's, and yes they ordered exactly as requested, can't ask for more.",
+  "position": {
+    "start": 4631,
+    "end": 4773,
+    "length": 142
+  },
+  "polarity": {
+    "score": 0.6597,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Rooms are a little on the small side but in line with most European hotels of this standard so wasn't a surprise or a problem, room and bathroom was cleaned every day with fresh towels supplied each day.",
+  "position": {
+    "start": 4774,
+    "end": 4977,
+    "length": 203
+  },
+  "polarity": {
+    "score": 0.4937,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Buffet breakfast had various options to suit most peoples taste but It was a surprise to see sausage, bacon and scrambled eggs available, must have been put on to satisfy us Brits!",
+  "position": {
+    "start": 4978,
+    "end": 5158,
+    "length": 180
+  },
+  "polarity": {
+    "score": 0.7871,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "We stayed during late September so the Lido is probably quieter at that time however we felt very safe walking around late at night back to the hotel but taxis are available if you feel a little vulnerable.",
+  "position": {
+    "start": 5159,
+    "end": 5365,
+    "length": 206
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Restaurants and coffee bars are located in the main commercial area close to the Waterbus stations and tend to be slightly cheaper than in Venice.",
+  "position": {
+    "start": 5366,
+    "end": 5512,
+    "length": 146
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "We had a water taxi (think luxury speed boat!)",
+  "position": {
+    "start": 5513,
+    "end": 5559,
+    "length": 46
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "from the airport to the hotel and back again, quite an experience, a little costly but well worth it, a lot quicker and less hassle than the Waterbus.",
+  "position": {
+    "start": 5560,
+    "end": 5710,
+    "length": 150
+  },
+  "polarity": {
+    "score": 0.5501,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Venice was very busy during the day time, St Marks Square at night is a must, fantastic atmosphere.",
+  "position": {
+    "start": 5711,
+    "end": 5810,
+    "length": 99
+  },
+  "polarity": {
+    "score": 0.5574,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "All in all we had a great time in Venice, it can be a little expensive so don't ponder over the bills to much, just pay up with a smile!",
+  "position": {
+    "start": 5811,
+    "end": 5947,
+    "length": 136
+  },
+  "polarity": {
+    "score": 0.7574,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Great stay...close to ferry.food not so good nearby\nStayed with parents, wife twin toddlers in two triple rooms.",
+  "position": {
+    "start": 5948,
+    "end": 6060,
+    "length": 112
+  },
+  "polarity": {
+    "score": 0.2666,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "The hotel is easy to reach and the rooms were well placed well furnished.",
+  "position": {
+    "start": 6061,
+    "end": 6134,
+    "length": 73
+  },
+  "polarity": {
+    "score": 0.7351,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The best feature was extremely friendly helpful staff, particularly Ms.",
+  "position": {
+    "start": 6135,
+    "end": 6206,
+    "length": 71
+  },
+  "polarity": {
+    "score": 0.895,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Annalucia Ms.",
+  "position": {
+    "start": 6207,
+    "end": 6220,
+    "length": 13
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Anna who were always ready to listen help out with big smiles.",
+  "position": {
+    "start": 6221,
+    "end": 6283,
+    "length": 62
+  },
+  "polarity": {
+    "score": 0.8074,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The breakfasts were very good, with good spread and the guests were made welcome to sit and eat at leisure (more important when you are with toddlers!)",
+  "position": {
+    "start": 6284,
+    "end": 6435,
+    "length": 151
+  },
+  "polarity": {
+    "score": 0.888,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Would surely go back to Venice would happily stay again at Russo Palace.",
+  "position": {
+    "start": 6436,
+    "end": 6508,
+    "length": 72
+  },
+  "polarity": {
+    "score": 0.7579,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "This hotel is in Lido which is a better choice than staying in crowded Venice.",
+  "position": {
+    "start": 6509,
+    "end": 6587,
+    "length": 78
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "The water bus is very convenient and it takes only few more stops to the main attractions in Venice.",
+  "position": {
+    "start": 6588,
+    "end": 6688,
+    "length": 100
+  },
+  "polarity": {
+    "score": 0.228,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "We received excellent service - many thanks to Anna and Donnatella who made us feel at home.",
+  "position": {
+    "start": 6689,
+    "end": 6781,
+    "length": 92
+  },
+  "polarity": {
+    "score": 0.765,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "It was a 10 min+ walk to water bus, would have liked it closer.",
+  "position": {
+    "start": 6782,
+    "end": 6845,
+    "length": 63
+  },
+  "polarity": {
+    "score": 0.4215,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Located on the water on Lido island, away from the rush of Venice\nRoom was tiny-bed saggy-bAthroom door didn't work.",
+  "position": {
+    "start": 6846,
+    "end": 6962,
+    "length": 116
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Good breakfast and convenient location.",
+  "position": {
+    "start": 6963,
+    "end": 7002,
+    "length": 39
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Wouldn't return or recommend.",
+  "position": {
+    "start": 7003,
+    "end": 7032,
+    "length": 29
+  },
+  "polarity": {
+    "score": -0.2755,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "VERY FRIENDLY AND HELPFUL WITH DIRECTIONS, KNOWING ALL THE RIGHT PLACES TO VISIT AND WHERE TO EAT TH BEST FOOD IN THE AREA.",
+  "position": {
+    "start": 7033,
+    "end": 7156,
+    "length": 123
+  },
+  "polarity": {
+    "score": 0.8947,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The Front Desk Receptionists were extremely helpful ..especially Sabrina who made us feel very welcomed to Lido....We will be back next year for sure!",
+  "position": {
+    "start": 7157,
+    "end": 7307,
+    "length": 150
+  },
+  "polarity": {
+    "score": 0.8115,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "No shower but jets in the bathtub and my room was slanted but made it work\nReally enjoyed the stay, about a 10min walk to the main waterbus station.",
+  "position": {
+    "start": 7308,
+    "end": 7456,
+    "length": 148
+  },
+  "polarity": {
+    "score": 0.6474,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Had the perfect quiet location and staff were really friendly!!",
+  "position": {
+    "start": 7457,
+    "end": 7520,
+    "length": 63
+  },
+  "polarity": {
+    "score": 0.8306,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Walls extremely thin, you can hear everything.",
+  "position": {
+    "start": 7521,
+    "end": 7567,
+    "length": 46
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Excessive hoovering every morning outside bedroom.",
+  "position": {
+    "start": 7568,
+    "end": 7618,
+    "length": 50
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "There.",
+  "position": {
+    "start": 7619,
+    "end": 7625,
+    "length": 6
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Is a bar, but no one to tend it.",
+  "position": {
+    "start": 7626,
+    "end": 7658,
+    "length": 32
+  },
+  "polarity": {
+    "score": -0.4215,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "If you're looking for a hotel where the action is, go elsewhere.",
+  "position": {
+    "start": 7659,
+    "end": 7723,
+    "length": 64
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The hotel is on the Lido, which is about a 10-15 minute waterbus ride away from Venice.",
+  "position": {
+    "start": 7724,
+    "end": 7811,
+    "length": 87
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "However, if you're looking for a place on the Lido, this is a well-priced option.",
+  "position": {
+    "start": 7812,
+    "end": 7893,
+    "length": 81
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The staff was great with handling/recommending dinner reservations, even during an insane Carnevale weekend.",
+  "position": {
+    "start": 7894,
+    "end": 8002,
+    "length": 108
+  },
+  "polarity": {
+    "score": 0.34,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "The doors are a little thin and since the building is old, the soundproofing needs improvement.",
+  "position": {
+    "start": 8003,
+    "end": 8098,
+    "length": 95
+  },
+  "polarity": {
+    "score": 0.4588,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "The quarters are cramped, but the room comes with breakfast.",
+  "position": {
+    "start": 8099,
+    "end": 8159,
+    "length": 60
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "If we wanted to stay on the Lido again, this would be a good option, but next time I think we'll opt for a place closer to the action.",
+  "position": {
+    "start": 8160,
+    "end": 8294,
+    "length": 134
+  },
+  "polarity": {
+    "score": 0.2382,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Recommended.",
+  "position": {
+    "start": 8295,
+    "end": 8307,
+    "length": 12
+  },
+  "polarity": {
+    "score": 0.2023,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Hotel facilities are good and breakfast ample.",
+  "position": {
+    "start": 8308,
+    "end": 8354,
+    "length": 46
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Econmy rooms have sloping roof so tall guests mind your head We stayed in one and it was fine, the occational bump but for the price you cant really complain.",
+  "position": {
+    "start": 8355,
+    "end": 8513,
+    "length": 158
+  },
+  "polarity": {
+    "score": 0.5252,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Friendly reception very helpful.",
+  "position": {
+    "start": 8514,
+    "end": 8546,
+    "length": 32
+  },
+  "polarity": {
+    "score": 0.7425,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Hotel has pleasant views and is about ten minute walk to main water bus terminal to take you any direction.",
+  "position": {
+    "start": 8547,
+    "end": 8654,
+    "length": 107
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "We used the spa one day.",
+  "position": {
+    "start": 8655,
+    "end": 8679,
+    "length": 24
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Good saunas but relaxation area noisy and small.",
+  "position": {
+    "start": 8680,
+    "end": 8728,
+    "length": 48
+  },
+  "polarity": {
+    "score": 0.6705,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Some lovely restaurants close by and cheaper than in Venice.",
+  "position": {
+    "start": 8729,
+    "end": 8789,
+    "length": 60
+  },
+  "polarity": {
+    "score": 0.5859,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "It was a bit far from city center\nGreat hotel, staff where amazing and the location and views make this a great Base to visit Venice!",
+  "position": {
+    "start": 8790,
+    "end": 8923,
+    "length": 133
+  },
+  "polarity": {
+    "score": 0.9333,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Close to Venice and decent hotel, breakfast was okay with no too much selection but has everything you need.",
+  "position": {
+    "start": 8924,
+    "end": 9032,
+    "length": 108
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "beautiful views of Venice in the lovely relaxed calmer area of Lido Di Venezia.",
+  "position": {
+    "start": 9033,
+    "end": 9112,
+    "length": 79
+  },
+  "polarity": {
+    "score": 0.9246,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Gorgeous sunsets and very easy to access Venice, rather than satying in the hustle and bustle.",
+  "position": {
+    "start": 9113,
+    "end": 9207,
+    "length": 94
+  },
+  "polarity": {
+    "score": 0.8016,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Close to only beaches in Venice.",
+  "position": {
+    "start": 9208,
+    "end": 9240,
+    "length": 32
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Staff were so helpful, especially Ivan and the lady we met on the desk each morning.",
+  "position": {
+    "start": 9241,
+    "end": 9325,
+    "length": 84
+  },
+  "polarity": {
+    "score": 0.5598,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "This is a great little hotel.",
+  "position": {
+    "start": 9326,
+    "end": 9355,
+    "length": 29
+  },
+  "polarity": {
+    "score": 0.6249,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "We had a wonderful view from the room and patio.",
+  "position": {
+    "start": 9356,
+    "end": 9404,
+    "length": 48
+  },
+  "polarity": {
+    "score": 0.5719,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Good size.",
+  "position": {
+    "start": 9405,
+    "end": 9415,
+    "length": 10
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Breakfast was great even had North American breakfast foods.",
+  "position": {
+    "start": 9416,
+    "end": 9476,
+    "length": 60
+  },
+  "polarity": {
+    "score": 0.6249,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Only issue was the two twin beds pushed together.",
+  "position": {
+    "start": 9477,
+    "end": 9526,
+    "length": 49
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "That was very uncomfortable.",
+  "position": {
+    "start": 9527,
+    "end": 9555,
+    "length": 28
+  },
+  "polarity": {
+    "score": -0.4391,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "Nice staff.",
+  "position": {
+    "start": 9556,
+    "end": 9567,
+    "length": 11
+  },
+  "polarity": {
+    "score": 0.4215,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Nice location.",
+  "position": {
+    "start": 9568,
+    "end": 9582,
+    "length": 14
+  },
+  "polarity": {
+    "score": 0.4215,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "We booked two nights at Russo hotel on Lido strip and two nights in the very center of Venice.",
+  "position": {
+    "start": 9583,
+    "end": 9677,
+    "length": 94
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "This is a good balance.",
+  "position": {
+    "start": 9678,
+    "end": 9701,
+    "length": 23
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Lido is a bit further but it feels more local and is more relaxing too, it gave us a taste of Dolce Vita.",
+  "position": {
+    "start": 9702,
+    "end": 9807,
+    "length": 105
+  },
+  "polarity": {
+    "score": 0.6946,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "We didn't see it on the hotel description but they offered us a taxi boat ride to Murano with another couple for free.",
+  "position": {
+    "start": 9808,
+    "end": 9926,
+    "length": 118
+  },
+  "polarity": {
+    "score": 0.6652,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The boat ride was very pleasant, they dropped us in a glass blowing factory shop, the glass making demonstration was nice and there was very little pressure to buy.",
+  "position": {
+    "start": 9927,
+    "end": 10091,
+    "length": 164
+  },
+  "polarity": {
+    "score": 0.6816,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Internet was free for 20 minutes/day but a bit slow like everywhere in Venice.",
+  "position": {
+    "start": 10092,
+    "end": 10170,
+    "length": 78
+  },
+  "polarity": {
+    "score": 0.6597,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "So in short a good pick, good value for money.",
+  "position": {
+    "start": 10171,
+    "end": 10217,
+    "length": 46
+  },
+  "polarity": {
+    "score": 0.8284,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Nice and clean.",
+  "position": {
+    "start": 10218,
+    "end": 10233,
+    "length": 15
+  },
+  "polarity": {
+    "score": 0.6705,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Rooms are spacious with air conditioning.",
+  "position": {
+    "start": 10234,
+    "end": 10275,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Good selection of breakfast.",
+  "position": {
+    "start": 10276,
+    "end": 10304,
+    "length": 28
+  },
+  "polarity": {
+    "score": 0.4404,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Within easy reach of San Marco.",
+  "position": {
+    "start": 10305,
+    "end": 10336,
+    "length": 31
+  },
+  "polarity": {
+    "score": 0.4588,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Quite location.",
+  "position": {
+    "start": 10337,
+    "end": 10352,
+    "length": 15
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "to share your opinion of this businesswith YP visitors across the United Statesand in your neighborhood\nto share your opinion of this businesswith YP visitors across the United Statesand in your neighborhood\nto share your opinion of this businesswith YP visitors across the United Statesand in your neighborhood\nThis place really is a little paradise!!",
+  "position": {
+    "start": 10353,
+    "end": 10705,
+    "length": 352
+  },
+  "polarity": {
+    "score": 0.9569,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "A beautiful boutique style hotel with EVERYTHING meticulously thought out to make our vacation perfect.",
+  "position": {
+    "start": 10706,
+    "end": 10809,
+    "length": 103
+  },
+  "polarity": {
+    "score": 0.8225,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Saltwater pool, fresh fruit, BEST showerhead I've ever experienced, I can go on and on.",
+  "position": {
+    "start": 10810,
+    "end": 10897,
+    "length": 87
+  },
+  "polarity": {
+    "score": 0.8038,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The bed was so comfortable and we slept like babies.",
+  "position": {
+    "start": 10898,
+    "end": 10950,
+    "length": 52
+  },
+  "polarity": {
+    "score": 0.7745,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Victor did a wonderful job and Judy was just lovely and personable!",
+  "position": {
+    "start": 10951,
+    "end": 11018,
+    "length": 67
+  },
+  "polarity": {
+    "score": 0.8313,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The room was clean, the hotel workers were very good and the breakfast was also good.",
+  "position": {
+    "start": 11019,
+    "end": 11104,
+    "length": 85
+  },
+  "polarity": {
+    "score": 0.8437,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "But the kennel with the dogs was awful.",
+  "position": {
+    "start": 11105,
+    "end": 11144,
+    "length": 39
+  },
+  "polarity": {
+    "score": -0.6124,
+    "ranking": "Extremely Negative"
+  }
+},
+{
+  "sentence": "These dogs starting barking at six in the morning.",
+  "position": {
+    "start": 11145,
+    "end": 11195,
+    "length": 50
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The television in my room was a twenty inch LG.",
+  "position": {
+    "start": 11196,
+    "end": 11243,
+    "length": 47
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "I will never go back there again.",
+  "position": {
+    "start": 11244,
+    "end": 11277,
+    "length": 33
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "Only .3 (three tenths!)",
+  "position": {
+    "start": 11278,
+    "end": 11301,
+    "length": 23
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "of a mile away from the Kirby St.",
+  "position": {
+    "start": 11302,
+    "end": 11335,
+    "length": 33
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "gate of NRG Stadium.",
+  "position": {
+    "start": 11336,
+    "end": 11356,
+    "length": 20
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "It can even be considered walking distance, and you avoid the price of parking!",
+  "position": {
+    "start": 11357,
+    "end": 11436,
+    "length": 79
+  },
+  "polarity": {
+    "score": -0.3595,
+    "ranking": "Negative"
+  }
+},
+{
+  "sentence": "How nice it is to be so nearby after attending an exciting event at NRG Stadium.....saving the possibly long drive home, or to the airport, for the next day.",
+  "position": {
+    "start": 11437,
+    "end": 11594,
+    "length": 157
+  },
+  "polarity": {
+    "score": 0.7184,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "On our two trips prior to this one both the breakfast and the internet were below par.",
+  "position": {
+    "start": 11595,
+    "end": 11681,
+    "length": 86
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "I am glad to report that on our most recent trip the internet worked great and the breakfast was much improved.",
+  "position": {
+    "start": 11682,
+    "end": 11793,
+    "length": 111
+  },
+  "polarity": {
+    "score": 0.8807,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "When you go to Texas for cancer treatment, the little things become big things.",
+  "position": {
+    "start": 11794,
+    "end": 11873,
+    "length": 79
+  },
+  "polarity": {
+    "score": -0.6597,
+    "ranking": "Extremely Negative"
+  }
+},
+{
+  "sentence": "You can stay here with confidence.",
+  "position": {
+    "start": 11874,
+    "end": 11908,
+    "length": 34
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "Stayed here for two nights to visit MDA.",
+  "position": {
+    "start": 11909,
+    "end": 11949,
+    "length": 40
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "The rooms are clean.",
+  "position": {
+    "start": 11950,
+    "end": 11970,
+    "length": 20
+  },
+  "polarity": {
+    "score": 0.4019,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "The bed is comfortable.",
+  "position": {
+    "start": 11971,
+    "end": 11994,
+    "length": 23
+  },
+  "polarity": {
+    "score": 0.5106,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The internet worked great.",
+  "position": {
+    "start": 11995,
+    "end": 12021,
+    "length": 26
+  },
+  "polarity": {
+    "score": 0.6249,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The staff was nice.",
+  "position": {
+    "start": 12022,
+    "end": 12041,
+    "length": 19
+  },
+  "polarity": {
+    "score": 0.4215,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "Close to many restaurants.",
+  "position": {
+    "start": 12042,
+    "end": 12068,
+    "length": 26
+  },
+  "polarity": {
+    "score": 0,
+    "ranking": "Neutro"
+  }
+},
+{
+  "sentence": "I highly recommend.",
+  "position": {
+    "start": 12069,
+    "end": 12088,
+    "length": 19
+  },
+  "polarity": {
+    "score": 0.4201,
+    "ranking": "Positive"
+  }
+},
+{
+  "sentence": "We stayed at Best Western the last visit and had a total different (bad) experience.",
+  "position": {
+    "start": 12089,
+    "end": 12173,
+    "length": 84
+  },
+  "polarity": {
+    "score": 0.6369,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "The hotel was great, staff was great only bad thing was the breakfast as I am a choice hotel guy and most of the comfort suites have a great breakfast this one kinda lacked.",
+  "position": {
+    "start": 12174,
+    "end": 12347,
+    "length": 173
+  },
+  "polarity": {
+    "score": 0.9112,
+    "ranking": "Extremely Positive"
+  }
+},
+{
+  "sentence": "But Staff and rest of the hotel was great",
+  "position": {
+    "start": 12348,
+    "end": 12389,
+    "length": 41
+  },
+  "polarity": {
+    "score": 0.7684,
+    "ranking": "Extremely Positive"
+  }
+}
+]
