@@ -38,4 +38,4 @@ O módulo implementado gera um arquivo __results_fileName.json__ para um determi
       ]
     }
 
-O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_)
+O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_).
