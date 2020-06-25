@@ -1,14 +1,16 @@
 # M04: Análise de Sentimentos
 
 ## Descrição
-Ferramenta para determinar se textos livres, a partir de um contexto, possuem conotação positiva, neutra ou negativa.
+Ferramenta para determinar se textos livres em Português, a partir de um contexto, possuem conotação positiva, neutra ou negativa.
 
 ## How To
-1 - Download _vader.py_. O código foi desenvolvido utilizando Python3 e é uma versão inicial do módulo, com a implementação do VADER (Valence Aware Dictionary and sEntiment Reasoner) para sentenças em Inglês. 
+1 - O código foi desenvolvido utilizando Python3 e é uma versão inicial do módulo de sentimentos para sentenças em Português. Para utilizá-lo, basta clonar o repositório para uma pasta local.
+    
+    git clone https://github.com/MPMG-DCC-UFMG/M04
 
-2 - Download bibliotecas necessárias.
+2 - Instalação de bibliotecas necessárias.
 
-    pip3 install --upgrade vaderSentiment
+    pip3 install -r enelvo/requirements.txt
     pip3 install nltk
     pip3 install pandas
     
@@ -22,18 +24,16 @@ Ferramenta para determinar se textos livres, a partir de um contexto, possuem co
 O módulo implementado gera um arquivo __results_fileName.json__ para um determinado __fileName.txt__ de entrada. O JSON possui a seguinte estrutura:
 
     [{
-      "sentence": "I hate you!",
+      "sentence": "Eu odeio você!",
       "position": {
         "start": 0,
-        "end": 11,
-        "length": 11
+        "end": 14,
+        "length": 14
       },
       "polarity": {
-        "score": -0.6114,
-        "ranking": "Extremely Negative"
+        "ranking": -4,
+        "polarity": "Muito Negativo"
       }
     }]
 
-O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_score_) e um _ranking_ baseado na conotação (_Extremely Negative, Negative, Neutro, Positive, Extremely Positive_).
-
-O programa gera ainda um arquivo __M04.log__ contendo as informações de logging referentes as execuções do mesmo. Caso o usuário opte pela entrada de texto (--text), o arquivo de log armazena os dados da sentença e os resultados correspondentes.
+O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_)
