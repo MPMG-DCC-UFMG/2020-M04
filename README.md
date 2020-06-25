@@ -16,7 +16,7 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
     
 3 - Existem duas formas de executar o programa. A primeira recebe o argumento __-t__ (--text) e a segunda __-f__ (--file). Para o segundo caso, o programa recebe um texto corrido, sem a separação de sentenças por quebra de linha.
 
-    python3 sentimento.py -t "this is an example."
+    python3 sentimento.py -t "Estou muito feliz!"
     
     python3 sentimento.py -f examplo.txt
     
