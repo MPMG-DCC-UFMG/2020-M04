@@ -18,7 +18,7 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
 
     python3 sentimento.py -t "this is an example."
     
-    python3 sentimento.py -f example.txt
+    python3 sentimento.py -f examplo.txt
     
 ## Output
 O módulo implementado gera um arquivo __results_fileName.json__ para um determinado __fileName.txt__ de entrada. O JSON possui a seguinte estrutura:
