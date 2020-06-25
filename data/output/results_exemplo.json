@@ -1,0 +1,364 @@
+{
+  "sentences": [
+    {
+      "text": "Hotel com preço bom e boas acomodações,só tenho uma coisa a reclamar.",
+      "position": {
+        "start": 0,
+        "end": 69,
+        "length": 69
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Reservei 4 quartos para estadia rápida antes do vôo, 1 deles pedi um berço.",
+      "position": {
+        "start": 69,
+        "end": 144,
+        "length": 75
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "No dia anterior liguei e confirmei o berço com o atendente, que informou que era só pedir no check in.",
+      "position": {
+        "start": 145,
+        "end": 247,
+        "length": 102
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Na hora do check in fui informado que o ÚNICO berço do hotel tinha sido reservado.",
+      "position": {
+        "start": 248,
+        "end": 330,
+        "length": 82
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Ein???",
+      "position": {
+        "start": 331,
+        "end": 337,
+        "length": 6
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Como que só tem um berço?",
+      "position": {
+        "start": 338,
+        "end": 363,
+        "length": 25
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Excelente hotel em Campo Grande.",
+      "position": {
+        "start": 364,
+        "end": 396,
+        "length": 32
+      },
+      "ranking": 3,
+      "polarity": "Muito Positivo"
+    },
+    {
+      "text": "Quartos amplos, limpos, bem arrumados e confortaveis.",
+      "position": {
+        "start": 397,
+        "end": 450,
+        "length": 53
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Cafe da manha maravilhoso bem diferenciado com varias comidas tipicas do local.",
+      "position": {
+        "start": 451,
+        "end": 530,
+        "length": 79
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Atendimento nota dez na recepcao.",
+      "position": {
+        "start": 531,
+        "end": 564,
+        "length": 33
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Bem localizado em local seguro para os visitantes.",
+      "position": {
+        "start": 565,
+        "end": 615,
+        "length": 50
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Espero voltar breve... bom demais!",
+      "position": {
+        "start": 616,
+        "end": 650,
+        "length": 34
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Quem ficou no hotel gostou, eu tive que passar dor de cabeça e providenciar outro.",
+      "position": {
+        "start": 651,
+        "end": 733,
+        "length": 82
+      },
+      "ranking": -3,
+      "polarity": "Muito Negativo"
+    },
+    {
+      "text": "Quarto e banheiros espaçosos e limpos.",
+      "position": {
+        "start": 734,
+        "end": 772,
+        "length": 38
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Café da manhã com muita variedade, frutas, pratos quentes, doces e salgados.",
+      "position": {
+        "start": 773,
+        "end": 849,
+        "length": 76
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Atendendentes simpáticos e atenciosos.",
+      "position": {
+        "start": 850,
+        "end": 888,
+        "length": 38
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Localização muito boa.",
+      "position": {
+        "start": 889,
+        "end": 911,
+        "length": 22
+      },
+      "ranking": 3,
+      "polarity": "Muito Positivo"
+    },
+    {
+      "text": "Voltaria a me hospedar neste hotel.",
+      "position": {
+        "start": 912,
+        "end": 947,
+        "length": 35
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Fica localizado no centro da cidade, de fácil acesso porém precisa melhorar e muito, primeiro, as janelas não tem isolamento térmico e nem acústico, pessoas como eu que são sensíveis ao frio sofrem porque a janela é daquelas de alumínio com passagens de ar, e como fiquei num quarto de frente pra avenida o barulho era grande, outro ponto é o fato de que a cama de casal parece duas de solteiro juntas e isso pelo menos me incomoda, a internet não pegava bem no meu quarto (fiquei no 109), porém os funcionários eram atenciosos e o café da manhã era razoável, pretendia ficar 1 semana mas só quis ficar uma noite e mudei de hotel.",
+      "position": {
+        "start": 948,
+        "end": 1578,
+        "length": 630
+      },
+      "ranking": -2,
+      "polarity": "Negativo"
+    },
+    {
+      "text": "Hotel muito bom, bom custo benefício, bom café da manhã, lugar aconchegante, quartos confortáveis, espaço do hotel bacana para ficar fora dos quartos, bem localizado, perto de tudo e do centro.",
+      "position": {
+        "start": 1579,
+        "end": 1772,
+        "length": 193
+      },
+      "ranking": 3,
+      "polarity": "Muito Positivo"
+    },
+    {
+      "text": "Funcionários atenciosos.",
+      "position": {
+        "start": 1773,
+        "end": 1797,
+        "length": 24
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Hotel razoável para quem só vai dormir, cama e ar condicionado, está passando por reforma e precisa melhorar a estrutura em mto, muitos defeitos nos pisos, bolores, box banheiro não fechava, chuveiro razoável, mas o q mais chateou foi q minha esposa fez uma cirurgia e precisava ficar mais sentada p dormir ao pedir mais travesseiros o recepcionista falou q nao tinha q os do hotel eram contatos... me poupe né, subimos para nos retirar devido a necessidade dela no dia - mas nesse meio tempo milagrosamente surgiram 2 travesseiros.",
+      "position": {
+        "start": 1798,
+        "end": 2330,
+        "length": 532
+      },
+      "ranking": -1,
+      "polarity": "Negativo"
+    },
+    {
+      "text": "Ficou visão mto negativa.",
+      "position": {
+        "start": 2331,
+        "end": 2356,
+        "length": 25
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Nos hospedamos o final de semana e gostamos muito do hotel.",
+      "position": {
+        "start": 2357,
+        "end": 2416,
+        "length": 59
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Funcionários cordiais e solícitos.",
+      "position": {
+        "start": 2417,
+        "end": 2451,
+        "length": 34
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Café da Manhã bem completo!",
+      "position": {
+        "start": 2452,
+        "end": 2479,
+        "length": 27
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Boa localização e tudo muito limpo.",
+      "position": {
+        "start": 2480,
+        "end": 2515,
+        "length": 35
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "O hotel passava por reformas.",
+      "position": {
+        "start": 2516,
+        "end": 2545,
+        "length": 29
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "O único quarto alegado como disponível (reserva pelo Booking) ainda está em reformas.",
+      "position": {
+        "start": 2546,
+        "end": 2631,
+        "length": 85
+      },
+      "ranking": 0,
+      "polarity": "Neutro"
+    },
+    {
+      "text": "Forte cheiro de massa corrida.",
+      "position": {
+        "start": 2632,
+        "end": 2662,
+        "length": 30
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Ducha não esquentou, box sujo com muito resíduo da reforma.",
+      "position": {
+        "start": 2663,
+        "end": 2722,
+        "length": 59
+      },
+      "ranking": -1,
+      "polarity": "Negativo"
+    },
+    {
+      "text": "Aparência antiga, piso frio velho.",
+      "position": {
+        "start": 2723,
+        "end": 2757,
+        "length": 34
+      },
+      "ranking": -1,
+      "polarity": "Negativo"
+    },
+    {
+      "text": "O hotel é bem localizado.",
+      "position": {
+        "start": 2758,
+        "end": 2783,
+        "length": 25
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "A noite não se ouve nenhum barulho da rua, por isso um sono tranquilo!",
+      "position": {
+        "start": 2784,
+        "end": 2854,
+        "length": 70
+      },
+      "ranking": 1,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Quarto espaçoso, TV grandona e enxoval bacana!",
+      "position": {
+        "start": 2855,
+        "end": 2901,
+        "length": 46
+      },
+      "ranking": 2,
+      "polarity": "Positivo"
+    },
+    {
+      "text": "Café da manhã incrível, com opções quentes saborosas, frutas diversas e bolos gostosos!",
+      "position": {
+        "start": 2902,
+        "end": 2989,
+        "length": 87
+      },
+      "ranking": 4,
+      "polarity": "Muito Positivo"
+    }
+  ]
+}
