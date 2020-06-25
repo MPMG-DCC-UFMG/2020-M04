@@ -23,17 +23,19 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
 ## Output
 O módulo implementado gera um arquivo __results_fileName.json__ para um determinado __fileName.txt__ de entrada. O JSON possui a seguinte estrutura:
 
-    [{
-      "sentence": "Eu odeio você!",
-      "position": {
-        "start": 0,
-        "end": 14,
-        "length": 14
-      },
-      "polarity": {
-        "ranking": -4,
-        "polarity": "Muito Negativo"
-      }
-    }]
+    {
+      "sentences": [
+        {
+          "text": "Café da manhã incrível, com opções  quentes saborosas, frutas diversas e bolos gostosos!",
+          "position": {
+            "start": 2901,
+            "end": 2988,
+            "length": 87
+          },
+          "ranking": 4,
+          "polarity": "Muito Positivo"
+        }
+      ]
+    }
 
 O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_)
