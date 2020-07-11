@@ -25,9 +25,9 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
     
     python3 sentimento.py -f examplo.txt
     
-    python3 sentimento.py -i [fonte]
+    python3 sentimento.py -i [fonte]/filename
     
-    python3 sentimento.py -w [fonte]
+    python3 sentimento.py -w [fonte]/filename
     
 ## Output
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
