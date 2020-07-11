@@ -7,12 +7,19 @@ import sys
 import pandas as pd
 import re
 import nltk
+import os
 import json
 
 # NLTK's data collection includes a trained model for Portuguese sentence segmentation
 stok = nltk.data.load('tokenizers/punkt/portuguese.pickle')
 
-# https://pypi.org/project/sentistrength/
+# Creates a normaliser object with default attributes.
+norm = normaliser.Normaliser()
+norm.capitalize_inis = True
+norm.capitalize_acrs = True
+norm.capitalize_pns = True
+
+# SentiStrength main class (https://pypi.org/project/sentistrength/)
 class PySentiStr:
     def __init__(self):
         pass
@@ -60,25 +67,33 @@ class PySentiStr:
             return "Argument 'score' takes in either 'scale' (between -1 to 1) or 'binary' (two scores, positive and negative rating)"
         return senti_score
 
-def sentistrengthClassifier():
-    senti = PySentiStr()
-    senti.setSentiStrengthPath('sentistrength/SentiStrength.jar')
-    senti.setSentiStrengthLanguageFolderPath('sentistrength/portugueseLexicon_modified')
-    return senti
+def getSentimentResults(text):
+    # Define classifier
+    classifier = PySentiStr()
+    classifier.setSentiStrengthPath('sentistrength/SentiStrength.jar')
+    classifier.setSentiStrengthLanguageFolderPath('sentistrength/portugueseLexicon_modified')
 
-def getSplitSentences(text):
-    text = text.replace("\\n", ". ")
-    text = text.replace('u.u', 'XXHAPPYXX')
-
-    #adding a white space after the punctuation (. ? and !) followed by any word + word except [.]
-    text = re.sub(r'(?<=[\w\s][?.!])(?=[\w][^.])', r' ', text)
-    text = text.replace('XXHAPPYXX', 'u.u')
-    return stok.tokenize(text)
+    # Get ranking and polarity for normalized text
+    try:
+        ranking = classifier.getSentiment(norm.normalise(text), score='scale')[0]
+        if ranking > 2:
+            polarity = "Muito Positivo"
+        elif ranking > 0:
+            polarity = "Positivo"
+        elif ranking < -2:
+            polarity = "Muito Negativo"
+        elif ranking < 0:
+            polarity = "Negativo"
+        else:
+            polarity = "Neutro"
+    except Exception as e:
+        ranking = ""
+        polarity = ""
+        pass  
+    return ranking, polarity
 
 def getArrayJsonSentences(complete_text):
     labeled_sentence = []
-    classifier = sentistrengthClassifier()
-    # complete_text = complete_text.lower()
 
     for sentence_text in getSplitSentences(complete_text):
         sentence_value = dict()
@@ -91,23 +106,7 @@ def getArrayJsonSentences(complete_text):
         sentence_value['position'] = {'start': i_start, 'end': i_end, 'length': length}
         
         #execute lexicon methods
-        try:
-            ranking = classifier.getSentiment(sentence_text, score='scale')[0]
-            
-            if ranking > 2:
-                polarity = "Muito Positivo"
-            elif ranking > 0:
-                polarity = "Positivo"
-            elif ranking < -2:
-                polarity = "Muito Negativo"
-            elif ranking < 0:
-                polarity = "Negativo"
-            else:
-                polarity = "Neutro"
-        except Exception as e:
-            ranking = ""
-            polarity = ""
-            pass        
+        ranking, polarity = getSentimentResults(sentence_text)
 
         sentence_value['ranking'] = ranking
         sentence_value['polarity'] = polarity
@@ -115,57 +114,134 @@ def getArrayJsonSentences(complete_text):
 
     return labeled_sentence
 
+def getSplitSentences(text):
+    text = text.replace("\\n", ". ")
+    text = text.replace('u.u', 'XXHAPPYXX')
+
+    # Add white space after the punctuation (. ? and !) followed by any word + word except [.]
+    text = re.sub(r'(?<=[\w\s][?.!])(?=[\w][^.])', r' ', text)
+    text = text.replace('XXHAPPYXX', 'u.u')
+    return stok.tokenize(text)
+
 def main():
     # Define data option
     parser = OptionParser()
     parser.add_option('-f', '--filename', dest='filename')
     parser.add_option('-t', '--text', dest='text')
+    parser.add_option('-i', '--instagram', dest='instagram')
+    parser.add_option('-w', '--whatsapp', dest='whatsapp')
 
     # Check user option
     try:
         (options, args) = parser.parse_args()
     except SystemExit:
         return
-
-    # Define classifier
-    classifier = sentistrengthClassifier()
-
-    
-    # Creates a normaliser object with default attributes.
-    norm = normaliser.Normaliser()
-    norm.capitalize_inis = True
-    norm.capitalize_acrs = True
-    norm.capitalize_pns = True
     
     # Handle user option
     if options.text:
         try:
             # Get an array for each sentence in the original text
-            labeled_sentence = getArrayJsonSentences(options.text)
-            data_output = dict()
-            data_output['sentences'] = labeled_sentence
-
-            # Print output
-            print(json.dumps(data_output))
+            ranking, polarity = getSentimentResults(options.text)
+            print(ranking, polarity)
 
         except Exception as e:
             print(e)
             return
+
     elif options.filename:
         try:    
             # Read text from the input file
-            text = open("data/input/" + options.filename).read()
+            text = open(options.filename).read()
 
             # Open Output file
-            output_file = open("data/output/results_" + options.filename.split(".")[0] + ".json", "w")
+            output_file = open(options.filename.split(".")[0] + ".json", "w")
 
             # Get an array for each sentence in the original text
             labeled_sentence = getArrayJsonSentences(text)
             data_output = dict()
             data_output['sentences'] = labeled_sentence
 
-            # Print output
+            # Write output
             output_file.write(json.dumps(data_output, indent = 2, ensure_ascii = False))
+
+            # Close Output file
+            output_file.close()
+
+        except Exception as e:
+            print(e)
+            return
+
+    elif options.instagram:
+        try:
+            # Set directory and filename
+            directory = options.instagram.replace("/datalake/ufmg/crawler/instagram/", "")
+            directory = "/datalake/ufmg/m04/instagram/" + directory
+            _file = directory.split("/")[-1]
+            directory = "/".join(directory.split("/")[0:-1]) + "/"
+
+            # Create directory if it does not exist
+            os.makedirs(os.path.dirname(directory), exist_ok=True)
+
+            # Open Output file
+            output_file = open(directory + _file, "w")
+
+            # Read file from the directory
+            txt_file = open(options.instagram).read().split("\n")
+            qntd = 0
+            for entry in txt_file:
+                if len(entry) == 0:
+                    continue
+                qntd = qntd + 1
+                entry = json.loads(entry)
+                if 'text' in entry:
+                    ranking, polarity = getSentimentResults(entry['text'])
+                    entry["sentiment"] = {"ranking": ranking, "polarity": polarity}
+                if qntd < (len(txt_file) - 1):
+                    output_file.write(json.dumps(entry) + "\n")
+                else:
+                    output_file.write(json.dumps(entry))
+                print("Processed", qntd, "out of", len(txt_file) - 1)
+
+            # Close Output file
+            output_file.close()
+
+        except Exception as e:
+            print(e)
+            return
+
+    elif options.whatsapp:
+        try:
+            # Set directory and filename
+            directory = options.whatsapp.replace("/datalake/ufmg/crawler/whatsapp/", "")
+            directory = "/datalake/ufmg/m04/whatsapp/" + directory
+            _file = directory.split("/")[-1]
+            directory = "/".join(directory.split("/")[0:-1]) + "/"
+
+            # Create directory if it does not exist
+            os.makedirs(os.path.dirname(directory), exist_ok=True)
+
+            # Open Output file
+            output_file = open(directory + _file, "w")
+
+            # Read file from the directory
+            txt_file = open(options.whatsapp).read().split("\n")
+            qntd = 0
+            for entry in txt_file:
+                if len(entry) == 0:
+                    continue
+                qntd = qntd + 1
+                entry = json.loads(entry)
+                if 'content' in entry:
+                    ranking, polarity = getSentimentResults(entry['content'])
+                    entry["sentiment"] = {"ranking": ranking, "polarity": polarity}
+                if qntd < (len(txt_file) - 1):
+                    output_file.write(json.dumps(entry) + "\n")
+                else:
+                    output_file.write(json.dumps(entry))
+                print("Processed", qntd, "out of", len(txt_file) - 1)
+
+            # Close Output file
+            output_file.close()
 
         except Exception as e:
             print(e)
