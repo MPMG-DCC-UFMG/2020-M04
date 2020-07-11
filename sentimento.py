@@ -149,12 +149,20 @@ def main():
             return
 
     elif options.filename:
-        try:    
+        try:
+            # Set directory and filename
+            _file = options.filename.split("/")[-1]
+            directory = "/".join(options.filename.split("/")[0:-1]) + "/"
+            directory = "/datalake/ufmg/m04/files" + directory
+
+            # Create directory if it does not exist
+            os.makedirs(os.path.dirname(directory), exist_ok=True)
+
             # Read text from the input file
             text = open(options.filename).read()
 
             # Open Output file
-            output_file = open(options.filename.split(".")[0] + ".json", "w")
+            output_file = open(directory + _file, "w")
 
             # Get an array for each sentence in the original text
             labeled_sentence = getArrayJsonSentences(text)
