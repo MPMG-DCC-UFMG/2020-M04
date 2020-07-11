@@ -51,7 +51,7 @@ A execuço do módulo com o argumento __-f__ para um determinado __[fonte]/fileN
 
 O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação.
 
-No caso dos argumentos referentes ao whatsapp e instagram, os arquivos JSONs com o resultado do processamento são salvos em /datalake/ufmg/m04/[fonte], onde [fonte] é a estrutura do diretório de entrada utilizado (ex de entrada: /datalake/ufmg/crawler/instagram/1592484906/..., ex de saida: /datalake/ufmg/m04/instagram/1592484906/...). No caso, os JSONs de entrada são replicados e o parâmetro "sentimento" é adicionado. 
+No caso dos argumentos referentes ao whatsapp e instagram, os arquivos JSONs com o resultado do processamento são salvos em /datalake/ufmg/m04/[fonte], onde [fonte] é a estrutura do diretório de entrada utilizado (ex de entrada: /datalake/ufmg/crawler/instagram/1592484906/..., ex de saida: /datalake/ufmg/m04/instagram/1592484906/...). No caso, os JSONs de entrada são replicados e o parâmetro _sentiment_ é adicionado. 
 
 Exemplo de retorno para comentário extraído do Instagram. A polaridade foi calculada baseada no parâmetro "text" do JSON.
 
