@@ -45,12 +45,6 @@ Com a instalação finalizada, os scripts do módulo de sentimentos estarão loc
 
     sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou muito feliz :)"
     
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -f examplo.txt
-    
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -i [fonte]/filename
-    
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -w [fonte]/filename
-    
 ## Saídas
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
 
