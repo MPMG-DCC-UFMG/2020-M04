@@ -25,7 +25,7 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
 
     python3 sentimento.py -t "Estou muito feliz :)"
     
-    python3 sentimento.py -f examplo.txt
+    python3 sentimento.py -f [fonte]/examplo.txt
     
     python3 sentimento.py -i [fonte]/filename
     
@@ -44,6 +44,9 @@ Com o Docker ativo e dentro da pasta M04/, onde estão localizados os arquivos D
 Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas.
 
     sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou muito feliz :)"
+    sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/exemplo.txt
+    sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -i /datalake/ufmg/[fonte]/filename
+    sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -w /datalake/ufmg/[fonte]/exemplo.txt
     
 ## Saídas
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
