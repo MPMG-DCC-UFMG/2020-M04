@@ -3,7 +3,9 @@
 ## Descrição
 Ferramenta para determinar se textos livres em Português, a partir de um contexto, possuem conotação positiva, neutra ou negativa.
 
-## How To
+## Instalação e Execução
+
+### Padrão
 1 - O código foi desenvolvido utilizando Python3 e é uma versão inicial do módulo de sentimentos para sentenças em Português. Para utilizá-lo, basta clonar o repositório para uma pasta local.
     
     git clone https://github.com/MPMG-DCC-UFMG/M04
@@ -29,7 +31,27 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
     
     python3 sentimento.py -w [fonte]/filename
     
-## Output
+### Docker
+É possível executar este módulo com o Docker, responsável por abranger todos os recursos necessários para sua execução. Os seguintes comandos podem ser utilizados para sua instalação (os testes foram realizados em ambiente Ubuntu 18.04). A documentação oficial pode ser acessada em https://docs.docker.com/get-started/ como guia externo para orientar a instalação e configuração do ambiente.
+
+    sudo apt install docker.io
+    sudo apt install docker-compose
+    
+Com o Docker ativo e dentro da pasta M04/, onde estão localizados os arquivos Dockerfile e docker-compose.yml, para instalar os recursos necessários para a execução do módulo e as suas dependências, execute o seguinte comando. Com isso, o módulo de sentimentos estará pronto para utilização.
+
+    sudo docker-compose build
+    
+Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas.
+
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou muito feliz :)"
+    
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -f examplo.txt
+    
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -i [fonte]/filename
+    
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -w [fonte]/filename
+    
+## Saídas
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
 
 A execuço do módulo com o argumento __-f__ para um determinado __[fonte]/fileName.txt__ de entrada gera um arquivo JSON de mesmo nome no diretório _/datalake/ufmg/m04/files/[fonte]/_. O JSON possui a seguinte estrutura:
