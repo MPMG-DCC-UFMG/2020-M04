@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  sentimento_python:
+    build: .
+    volumes:
+      - .:/app
