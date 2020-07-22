@@ -36,14 +36,18 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
 
     sudo apt install docker.io
     sudo apt install docker-compose
+
+Com a instalação finalizada, caso o Docker não esteja rodando, utilize o seguinte comando para iniciá-lo.
+
+    sudo service docker start
     
-Com o Docker ativo e dentro da pasta M04/, onde estão localizados os arquivos Dockerfile e docker-compose.yml, para instalar os recursos necessários para a execução do módulo e as suas dependências, execute o seguinte comando. Com isso, o módulo de sentimentos estará pronto para utilização.
+Com o Docker ativo e o usuário dentro da pasta M04/, onde estão localizados os arquivos Dockerfile e docker-compose.yml, para instalar os recursos necessários para a execução do módulo e as suas dependências, execute o seguinte comando. Com isso, o módulo de sentimentos estará pronto para utilização.
 
     sudo docker-compose build
     
 Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas.
 
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou muito feliz :)"
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou feliz :)"
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/exemplo.txt
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -i /datalake/ufmg/[fonte]/filename
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -w /datalake/ufmg/[fonte]/exemplo.txt
@@ -74,4 +78,18 @@ No caso dos argumentos referentes ao whatsapp e instagram, os arquivos JSONs com
 
 Exemplo de retorno para comentário extraído do Instagram. A polaridade foi calculada baseada no parâmetro "text" do JSON.
 
-    {"text": "Bora @ariel_triatleta", "created_time": 1592400295, "created_time_str": "2020-06-17 10:24:55", "media_code": "CBgy_mRJnyH", "id": "17849543501112303", "owner_username": "jpbrag", "owner_id": "47973234", "tags": [], "mentioned_usernames": ["ariel_triatleta"], "sentiment": {"ranking": 0, "polarity": "Neutro"}}
+    {
+        "text": "Bora @ariel_triatleta", 
+        "created_time": 1592400295, 
+        "created_time_str": "2020-06-17 10:24:55", 
+        "media_code": "CBgy_mRJnyH", 
+        "id": "17849543501112303", 
+        "owner_username": "jpbrag", 
+        "owner_id": "47973234", 
+        "tags": [], 
+        "mentioned_usernames": ["ariel_triatleta"], 
+        "sentiment": {
+            "ranking": 0, 
+            "polarity": "Neutro"muito
+        }
+    }
