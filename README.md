@@ -90,6 +90,6 @@ Exemplo de retorno para comentário extraído do Instagram. A polaridade foi cal
         "mentioned_usernames": ["ariel_triatleta"], 
         "sentiment": {
             "ranking": 0, 
-            "polarity": "Neutro"muito
+            "polarity": "Neutro"
         }
     }
