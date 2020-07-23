@@ -48,7 +48,7 @@ Com o Docker ativo e o usuário dentro da pasta M04/, onde estão localizados os
 Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas.
 
     sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou feliz :)"
-    sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/exemplo.txt
+    sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/m04/input/exemplo_input.txt
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -i /datalake/ufmg/[fonte]/filename
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -w /datalake/ufmg/[fonte]/exemplo.txt
     
