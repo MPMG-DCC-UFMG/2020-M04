@@ -9,6 +9,7 @@ import re
 import nltk
 import os
 import json
+import operator
 
 # NLTK's data collection includes a trained model for Portuguese sentence segmentation
 stok = nltk.data.load('tokenizers/punkt/portuguese.pickle')
@@ -163,11 +164,26 @@ def main():
 
             # Open Output file
             output_file = open(directory + _file, "w")
-
+            
             # Get an array for each sentence in the original text
             labeled_sentence = getArrayJsonSentences(text)
+            
+            # Get overall score for sentences
+            ranking_scores = dict({-4:0, -3:0, -2:0, -1:0, 0:0, 1:0, 2:0, 3:0, 4:0})
+            for sentence in labeled_sentence:
+                ranking_scores[sentence['ranking']] += 1
+
+            ranking_scores_translated = dict()
+            ranking_scores_translated['Muito Negativo'] = ranking_scores[-4] + ranking_scores[-3]
+            ranking_scores_translated['Negativo'] = ranking_scores[-2] + ranking_scores[-1]
+            ranking_scores_translated['Neutro'] = ranking_scores[0]
+            ranking_scores_translated['Positivo'] = ranking_scores[1] + ranking_scores[2]
+            ranking_scores_translated['Muito Positivo'] = ranking_scores[3] + ranking_scores[4]
+
+            # Output json
             data_output = dict()
             data_output['sentences'] = labeled_sentence
+            data_output['text'] = {'ranking': ranking_scores, 'polarity': ranking_scores_translated, 'overall_polarity': max(ranking_scores_translated.items(), key=operator.itemgetter(1))[0]}
 
             # Write output
             output_file.write(json.dumps(data_output, indent = 2, ensure_ascii = False))
@@ -208,7 +224,7 @@ def main():
                     output_file.write(json.dumps(entry) + "\n")
                 else:
                     output_file.write(json.dumps(entry))
-                print("Processed", qntd, "out of", len(txt_file) - 1)
+                # print("Processed", qntd, "out of", len(txt_file) - 1)
 
             # Close Output file
             output_file.close()
@@ -246,7 +262,7 @@ def main():
                     output_file.write(json.dumps(entry) + "\n")
                 else:
                     output_file.write(json.dumps(entry))
-                print("Processed", qntd, "out of", len(txt_file) - 1)
+                # print("Processed", qntd, "out of", len(txt_file) - 1)
 
             # Close Output file
             output_file.close()
