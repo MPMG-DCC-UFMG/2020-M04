@@ -32,16 +32,7 @@ Ferramenta para determinar se textos livres em Português, a partir de um contex
     python3 sentimento.py -w [fonte]/filename
     
 ### Docker
-É possível executar este módulo com o Docker, responsável por abranger todos os recursos necessários para sua execução. Os seguintes comandos podem ser utilizados para sua instalação (os testes foram realizados em ambiente Ubuntu 18.04). A documentação oficial pode ser acessada em https://docs.docker.com/get-started/ como guia externo para orientar a instalação e configuração do ambiente.
-
-    sudo apt install docker.io
-    sudo apt install docker-compose
-
-Com a instalação finalizada, caso o Docker não esteja rodando, utilize o seguinte comando para iniciá-lo.
-
-    sudo service docker start
-    
-Com o Docker ativo e o usuário dentro da pasta M04/, onde estão localizados os arquivos Dockerfile e docker-compose.yml, para instalar os recursos necessários para a execução do módulo e as suas dependências, execute o seguinte comando. Com isso, o módulo de sentimentos estará pronto para utilização.
+Com o Docker ativo e o usuário dentro da pasta M04/, onde estão localizados os arquivos Dockerfile e docker-compose.yml, para instalar os recursos necessários para a execução do módulo e as suas dependências, execute o seguinte comando (caso já não o tenha feito). Com isso, o módulo de sentimentos estará pronto para utilização.
 
     sudo docker-compose build
     
@@ -72,10 +63,31 @@ A execuço do módulo com o argumento __-f__ para um determinado __[fonte]/fileN
           "ranking": 4,
           "polarity": "Muito Positivo"
         }
-      ]
+      ],
+      "text": {
+        "ranking": {
+          "-4": 0,
+          "-3": 0,
+          "-2": 0,
+          "-1": 0,
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1
+        },
+        "polarity": {
+          "Muito Negativo": 0,
+          "Negativo": 0,
+          "Neutro": 0,
+          "Positivo": 0,
+          "Muito Positivo": 1
+        },
+        "overall_polarity": "Neutro"
+      }
     }
 
-O arquivo JSON contém cada frase do texto separada, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação.
+O arquivo JSON contém cada frase do texto separada dentro do subgrupo _sentences_, a posição dos caracteres de início (_start_) e término (_end_) no arquivo de entrada, o tamanho da sentença (_length_), a conotação encontrada (_ranking_) e a _polarity_ baseada na conotação. Dentro do subgrupo _text_, os resultados considerando o texto de todo arquivo (não apenas as sentenças) são levados em conta, onde _ranking_ e _polarity_ apresentam o número de sentenças com os referidos  scores, e _overall_polarity_ determina a polaridade geral do texto.
 
 No caso dos argumentos referentes ao whatsapp e instagram, os arquivos JSONs com o resultado do processamento são salvos em /datalake/ufmg/m04/[fonte], onde [fonte] é a estrutura do diretório de entrada utilizado (ex de entrada: /datalake/ufmg/crawler/instagram/1592484906/..., ex de saida: /datalake/ufmg/m04/instagram/[fonte]/...). No caso, os JSONs de entrada são replicados e o parâmetro _sentiment_ é adicionado. 
 
