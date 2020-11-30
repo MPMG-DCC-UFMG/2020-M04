@@ -1,5 +1,4 @@
 from optparse import OptionParser
-from enelvo import normaliser
 import subprocess
 import shlex
 import os.path
@@ -10,15 +9,7 @@ import nltk
 import os
 import json
 import operator
-
-# NLTK's data collection includes a trained model for Portuguese sentence segmentation
-stok = nltk.data.load('tokenizers/punkt/portuguese.pickle')
-
-# Creates a normaliser object with default attributes.
-norm = normaliser.Normaliser()
-norm.capitalize_inis = True
-norm.capitalize_acrs = True
-norm.capitalize_pns = True
+from json import dump
 
 # SentiStrength main class (https://pypi.org/project/sentistrength/)
 class PySentiStr:
@@ -44,6 +35,10 @@ class PySentiStr:
             df_text = pd.Series(df_text)
         df_text = df_text.str.replace('\n','')
         df_text = df_text.str.replace('\r','')
+
+        df_text = df_text.str.replace('!','.')
+        df_text = df_text.str.replace('?','.')
+
         conc_text = '\n'.join(df_text)
         p = subprocess.Popen(shlex.split("java -jar '" + self.SentiStrengthLocation + "' stdin sentidata '" + self.SentiStrengthLanguageFolder + "' trinary"),stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         b = bytes(conc_text, 'utf-8')
@@ -52,9 +47,9 @@ class PySentiStr:
         stdout_text = stdout_text.rstrip().replace("\t"," ")
         stdout_text = stdout_text.replace('\r\n','')
         senti_score = stdout_text.split(' ')
-     
+        
         senti_score = list(map(float, senti_score))        
-
+        
         senti_score = [int(i) for i in senti_score]
         if score == 'scale': # Returns from -4 to 4
             senti_score = [sum(senti_score[i:i+2]) for i in range(0, len(senti_score), 3)]
@@ -69,14 +64,24 @@ class PySentiStr:
         return senti_score
 
 def getSentimentResults(text):
-    # Define classifier
-    classifier = PySentiStr()
-    classifier.setSentiStrengthPath('sentistrength/SentiStrength.jar')
-    classifier.setSentiStrengthLanguageFolderPath('sentistrength/portugueseLexicon_modified')
+    # Verify whether it is an ad post
+    neutralWords = ["promocao", "promoção", "promocão", "promoçao", "concorr", "venda", "promo", "frete", "premi", "prêmi"]
+    for i in neutralWords:
+        if i in neutralWords:
+            if i in text.lower():
+                return 0, "Neutro"
+
+    # Verify whether it contains neg/pos emojis
+    for i in negEmojis:
+        text = text.replace(i, ":(")
+    for i in posEmojis:
+        text = text.replace(i, ":)")
+
 
     # Get ranking and polarity for normalized text
     try:
-        ranking = classifier.getSentiment(norm.normalise(text), score='scale')[0]
+        ranking = classifier.getSentiment(text, score='scale')[0]
+        
         if ranking > 2:
             polarity = "Muito Positivo"
         elif ranking > 0:
@@ -116,13 +121,28 @@ def getArrayJsonSentences(complete_text):
     return labeled_sentence
 
 def getSplitSentences(text):
-    text = text.replace("\\n", ". ")
-    text = text.replace('u.u', 'XXHAPPYXX')
-
     # Add white space after the punctuation (. ? and !) followed by any word + word except [.]
     text = re.sub(r'(?<=[\w\s][?.!])(?=[\w][^.])', r' ', text)
-    text = text.replace('XXHAPPYXX', 'u.u')
+    text = text.replace("\\n", ". ")
     return stok.tokenize(text)
+
+# Define classifier
+classifier = PySentiStr()
+classifier.setSentiStrengthPath('sentistrength/SentiStrength.jar')
+classifier.setSentiStrengthLanguageFolderPath('sentistrength/portugueseLexicon_modified_final')
+
+# NLTK's data collection includes a trained model for Portuguese sentence segmentation
+stok = nltk.data.load('tokenizers/punkt/portuguese.pickle')
+
+# Read neg/pos emojis
+negEmojis = list()
+posEmojis = list()
+with open("sentistrength/portugueseLexicon_modified_final/negEmoji.txt") as f:
+    for line in f:
+        negEmojis.append(line.strip())
+with open("sentistrength/portugueseLexicon_modified_final/posEmoji.txt") as f:
+    for line in f:
+        posEmojis.append(line.strip())
 
 def main():
     # Define data option
