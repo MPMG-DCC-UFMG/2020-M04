@@ -147,10 +147,8 @@ with open("sentistrength/portugueseLexicon_modified_final/posEmoji.txt") as f:
 def main():
     # Define data option
     parser = OptionParser()
-    parser.add_option('-f', '--filename', dest='filename')
     parser.add_option('-t', '--text', dest='text')
-    parser.add_option('-i', '--instagram', dest='instagram')
-    parser.add_option('-w', '--whatsapp', dest='whatsapp')
+    parser.add_option('-f', '--filename', dest='filename')
 
     # Check user option
     try:
@@ -170,126 +168,53 @@ def main():
             return
 
     elif options.filename:
-        try:
-            # Set directory and filename
-            _file = options.filename.split("/")[-1]
-            directory = "/".join(options.filename.split("/")[0:-1]) + "/"
-            directory = "/datalake/ufmg/m04/files" + directory
+        listFiles = args
+        args.insert(0, options.filename)
+        for filename in listFiles:
+            try:
+                # Set directory and filename
+                _file = filename.split("/")[-1]
+                directory = "/".join(filename.split("/")[0:-1]) + "/"
+                directory = "/datalake/ufmg/m04/files" + directory
 
-            # Create directory if it does not exist
-            os.makedirs(os.path.dirname(directory), exist_ok=True)
+                # Create directory if it does not exist
+                os.makedirs(os.path.dirname(directory), exist_ok=True)
 
-            # Read text from the input file
-            text = open(options.filename).read()
+                # Read text from the input file
+                text = open(filename).read()
 
-            # Open Output file
-            output_file = open(directory + _file, "w")
-            
-            # Get an array for each sentence in the original text
-            labeled_sentence = getArrayJsonSentences(text)
-            
-            # Get overall score for sentences
-            ranking_scores = dict({-4:0, -3:0, -2:0, -1:0, 0:0, 1:0, 2:0, 3:0, 4:0})
-            for sentence in labeled_sentence:
-                ranking_scores[sentence['ranking']] += 1
+                # Open Output file
+                output_file = open(directory + _file, "w")
+                
+                # Get an array for each sentence in the original text
+                labeled_sentence = getArrayJsonSentences(text)
+                
+                # Get overall score for sentences
+                ranking_scores = dict({-4:0, -3:0, -2:0, -1:0, 0:0, 1:0, 2:0, 3:0, 4:0})
+                for sentence in labeled_sentence:
+                    ranking_scores[sentence['ranking']] += 1
 
-            ranking_scores_translated = dict()
-            ranking_scores_translated['Muito Negativo'] = ranking_scores[-4] + ranking_scores[-3]
-            ranking_scores_translated['Negativo'] = ranking_scores[-2] + ranking_scores[-1]
-            ranking_scores_translated['Neutro'] = ranking_scores[0]
-            ranking_scores_translated['Positivo'] = ranking_scores[1] + ranking_scores[2]
-            ranking_scores_translated['Muito Positivo'] = ranking_scores[3] + ranking_scores[4]
+                ranking_scores_translated = dict()
+                ranking_scores_translated['Muito Negativo'] = ranking_scores[-4] + ranking_scores[-3]
+                ranking_scores_translated['Negativo'] = ranking_scores[-2] + ranking_scores[-1]
+                ranking_scores_translated['Neutro'] = ranking_scores[0]
+                ranking_scores_translated['Positivo'] = ranking_scores[1] + ranking_scores[2]
+                ranking_scores_translated['Muito Positivo'] = ranking_scores[3] + ranking_scores[4]
 
-            # Output json
-            data_output = dict()
-            data_output['sentences'] = labeled_sentence
-            data_output['text'] = {'ranking': ranking_scores, 'polarity': ranking_scores_translated, 'overall_polarity': max(ranking_scores_translated.items(), key=operator.itemgetter(1))[0]}
+                # Output json
+                data_output = dict()
+                data_output['sentences'] = labeled_sentence
+                data_output['text'] = {'ranking': ranking_scores, 'polarity': ranking_scores_translated, 'overall_polarity': max(ranking_scores_translated.items(), key=operator.itemgetter(1))[0]}
 
-            # Write output
-            output_file.write(json.dumps(data_output, indent = 2, ensure_ascii = False))
+                # Write output
+                output_file.write(json.dumps(data_output, indent = 2, ensure_ascii = False))
 
-            # Close Output file
-            output_file.close()
+                # Close Output file
+                output_file.close()
 
-        except Exception as e:
-            print(e)
-            return
-
-    elif options.instagram:
-        try:
-            # Set directory and filename
-            directory = options.instagram.replace("/datalake/ufmg/crawler/instagram/", "")
-            directory = "/datalake/ufmg/m04/instagram/" + directory
-            _file = directory.split("/")[-1]
-            directory = "/".join(directory.split("/")[0:-1]) + "/"
-
-            # Create directory if it does not exist
-            os.makedirs(os.path.dirname(directory), exist_ok=True)
-
-            # Open Output file
-            output_file = open(directory + _file, "w")
-
-            # Read file from the directory
-            txt_file = open(options.instagram).read().split("\n")
-            qntd = 0
-            for entry in txt_file:
-                if len(entry) == 0:
-                    continue
-                qntd = qntd + 1
-                entry = json.loads(entry)
-                if 'text' in entry:
-                    ranking, polarity = getSentimentResults(entry['text'])
-                    entry["sentiment"] = {"ranking": ranking, "polarity": polarity}
-                if qntd < (len(txt_file) - 1):
-                    output_file.write(json.dumps(entry) + "\n")
-                else:
-                    output_file.write(json.dumps(entry))
-                # print("Processed", qntd, "out of", len(txt_file) - 1)
-
-            # Close Output file
-            output_file.close()
-
-        except Exception as e:
-            print(e)
-            return
-
-    elif options.whatsapp:
-        try:
-            # Set directory and filename
-            directory = options.whatsapp.replace("/datalake/ufmg/crawler/whatsapp/", "")
-            directory = "/datalake/ufmg/m04/whatsapp/" + directory
-            _file = directory.split("/")[-1]
-            directory = "/".join(directory.split("/")[0:-1]) + "/"
-
-            # Create directory if it does not exist
-            os.makedirs(os.path.dirname(directory), exist_ok=True)
-
-            # Open Output file
-            output_file = open(directory + _file, "w")
-
-            # Read file from the directory
-            txt_file = open(options.whatsapp).read().split("\n")
-            qntd = 0
-            for entry in txt_file:
-                if len(entry) == 0:
-                    continue
-                qntd = qntd + 1
-                entry = json.loads(entry)
-                if 'content' in entry:
-                    ranking, polarity = getSentimentResults(entry['content'])
-                    entry["sentiment"] = {"ranking": ranking, "polarity": polarity}
-                if qntd < (len(txt_file) - 1):
-                    output_file.write(json.dumps(entry) + "\n")
-                else:
-                    output_file.write(json.dumps(entry))
-                # print("Processed", qntd, "out of", len(txt_file) - 1)
-
-            # Close Output file
-            output_file.close()
-
-        except Exception as e:
-            print(e)
-            return
+            except Exception as e:
+                print(e)
+                continue
 
 
 if __name__ == '__main__':
