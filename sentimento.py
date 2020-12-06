@@ -1,3 +1,4 @@
+from kafka import KafkaConsumer, KafkaProducer
 from optparse import OptionParser
 import subprocess
 import shlex
@@ -10,6 +11,8 @@ import os
 import json
 import operator
 from json import dump
+import time
+from random import randint
 
 # SentiStrength main class (https://pypi.org/project/sentistrength/)
 class PySentiStr:
@@ -149,6 +152,7 @@ def main():
     parser = OptionParser()
     parser.add_option('-t', '--text', dest='text')
     parser.add_option('-f', '--filename', dest='filename')
+    parser.add_option('-c', '--crawler', dest='crawler')
 
     # Check user option
     try:
@@ -167,6 +171,7 @@ def main():
             print(e)
             return
 
+    # Handle filename option
     elif options.filename:
         listFiles = args
         args.insert(0, options.filename)
@@ -216,6 +221,55 @@ def main():
                 print(e)
                 continue
 
+    # Handle files from crawler
+    elif options.crawler:
+        try:
+            bootstrapServer = [options.crawler]
+            consumerTopic = args[0]
+            if len(args) > 1:
+                producerTopic = args[1]
+            if len(args) > 2:
+                groupId = args[2]
+            else:
+                groupId = "group" + str(randint(0,100))
+        except Exception as e:
+            print("Passagem de parâmetros incorreta. Consulte documentação para detalhes")
+            return
+
+        try:
+            # Initialize consumer variable
+            consumer = KafkaConsumer(consumerTopic, auto_offset_reset='latest', group_id=groupId, bootstrap_servers=bootstrapServer, api_version=(0, 10))
+            if len(args) > 1:
+                # Initialize producer variable
+                producer = KafkaProducer(bootstrap_servers = bootstrapServer)
+        except Exception as e:
+            print(e)
+            return
+        
+        # Keep consumer alive
+        while True:
+            try:
+                # Consume data from the topic
+                message = consumer.poll()
+                if not message:
+                    time.sleep(5) # Sleep for 5 seconds
+                    print("Sleeping for 5 seconds...")
+                else:
+                    for i in message:
+                        for j in message[i]:
+                            content = j.value.decode()
+                            postId = content # to complete to get the post ID (assuming json has been received)
+                            text = content # to complete to get the post text (assuming json has been received)
+                            print(text)
+                            if len(args) > 1:
+                                ranking, polarity = getSentimentResults(text)
+                                output = {"id":postId, "sentiment":{"ranking":ranking, "polarity":polarity}}
+                                producer.send(producerTopic, str.encode(json.dumps(output)))
+            except Exception as e:
+                print(e)
+                return
+    else:
+        return
 
 if __name__ == '__main__':
     main()
