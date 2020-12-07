@@ -8,3 +8,4 @@ pytest-cov
 coveralls
 pandas
 nltk
+kafka-python==2.0.2
