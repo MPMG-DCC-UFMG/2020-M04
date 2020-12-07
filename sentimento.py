@@ -256,15 +256,19 @@ def main():
                     print("Sleeping for 5 seconds...")
                 else:
                     for i in message:
-                        for j in message[i]:
-                            content = j.value.decode()
-                            postId = content # to complete to get the post ID (assuming json has been received)
-                            text = content # to complete to get the post text (assuming json has been received)
-                            print(text)
-                            if len(args) > 1:
-                                ranking, polarity = getSentimentResults(text)
-                                output = {"id":postId, "sentiment":{"ranking":ranking, "polarity":polarity}}
-                                producer.send(producerTopic, str.encode(json.dumps(output)))
+                        try:
+                            for j in message[i]:
+                                content = json.loads(j.value)
+                                print(content)
+                                if len(args) > 1:
+                                    postId = content['id']
+                                    text = content['text']
+                                    ranking, polarity = getSentimentResults(text)
+                                    output = {"id":postId, "sentiment":{"ranking":ranking, "polarity":polarity}}
+                                    producer.send(producerTopic, str.encode(json.dumps(output)))
+                        except Exception as e:
+                            print(e)
+                            continue
             except Exception as e:
                 print(e)
                 return
