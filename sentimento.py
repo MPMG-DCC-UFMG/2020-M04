@@ -261,8 +261,17 @@ def main():
                                 content = json.loads(j.value)
                                 print(content)
                                 if len(args) > 1:
-                                    postId = content['id']
-                                    text = content['text']
+                                    if "id" in content and "text" in content:
+                                        postIdCode = "id"
+                                        postTextCode = "text"
+                                    elif "identificador" in content and "texto" in content:
+                                        postIdCode = "identificador"
+                                        postTextCode = "texto"
+                                    else:
+                                        print("Identificador e texto não encontrados")
+                                        continue
+                                    postId = content[postIdCode]
+                                    text = content[postTextCode]
                                     ranking, polarity = getSentimentResults(text)
                                     output = {"id":postId, "sentiment":{"ranking":ranking, "polarity":polarity}}
                                     producer.send(producerTopic, str.encode(json.dumps(output)))
