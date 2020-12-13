@@ -34,15 +34,15 @@ A segunda maneira recebe o argumento __-f__ (--file). Neste segundo caso, o prog
     
     python3 sentimento.py -f [fonte]/examplo.txt [fonte]/examplo_2.txt [fonte]/examplo_3.txt [...]
     
-Finalmente, a terceira maneira recebe o argumento __-c__ (--crawler). Este argumento foi criado especificamente para atender às necessidades de integração do módulo de sentimentos com os coletores de redes sociais. Esta chamada recebe ainda como parâmetro o servidor e a porta, o tópico consumidor, produtor, e o identificador do grupo. O padrão genérico de execução é apresentado a seguir.
+Finalmente, a terceira maneira recebe o argumento __-c__ (--crawler). Este argumento foi criado especificamente para atender às necessidades de integração do módulo de sentimentos com os coletores de redes sociais. Esta chamada recebe ainda como parâmetro o tópico consumidor, produtor, e o identificador do grupo. O padrão genérico de execução é apresentado a seguir.
 
-    python3 sentimento.py -c bootstrapServer:portNumber consumerTopic producerTopic groupId
+    python3 sentimento.py -c consumerTopic producerTopic groupId
     
-Os parâmetros do servidor e tópico consumidor são mandatórios. Se o tópico produtor não for fornecido e nem o identificador do grupo informado, o programa irá se comportar apenas como um consumidor, e um identificador de grupo aleatório será utilizado. São exemplos de execução. No primeiro exemplo, M04 irá consumir do tópico _crawler_whatsapp_mensagem_ e produzir no tópico _model_analise_sentimento_whatsapp_mensagem_. O segundo caso apenas consome do primeiro tópico.
+O parâmetro do tópico consumidor é mandatório. Se o tópico produtor não for fornecido e nem o identificador do grupo informado, o programa irá se comportar apenas como um consumidor, e um identificador de grupo aleatório será utilizado. São exemplos de execução. No primeiro exemplo, M04 irá consumir do tópico _crawler_whatsapp_mensagem_ e produzir no tópico _model_analise_sentimento_whatsapp_mensagem_. O segundo caso apenas consome do primeiro tópico.
 
-    python3 sentimento.py -c server:port crawler_whatsapp_mensagem model_analise_sentimento_whatsapp_mensagem group1
+    python3 sentimento.py -c crawler_whatsapp_mensagem model_analise_sentimento_whatsapp_mensagem group1
     
-    python3 sentimento.py -c server:port crawler_whatsapp_mensagem
+    python3 sentimento.py -c crawler_whatsapp_mensagem
     
 ### Docker
 É possível encapsular todo o processo de execução em containers do Docker. A instalação e ativação ocorreu a partir da execução dos seguintes comandos.
@@ -65,7 +65,7 @@ Com a instalação finalizada, os scripts do módulo de sentimentos estarão loc
     
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/m04/input/exemplo_input.txt
     
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -c server:port model_analise_sentimento_instagram_comentario model_analise_sentimento_instagram_post group1
+    sudo docker run --rm m04_sentimento_python python3 sentimento.py -c model_analise_sentimento_instagram_comentario model_analise_sentimento_instagram_post group1
     
 ## Saídas
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
@@ -113,7 +113,7 @@ O arquivo JSON contém cada frase do texto separada dentro do subgrupo _sentence
 No caso dos argumentos da execução utilizando o argumento __-c__, é escrito no tópico do Kafka o _id_ da mensagem recebida do consumidor, e ranking e a polaridade referente a mensagem. O JSON possui a seguinte estrutura:
 
     {
-      "id": 123890,
+      "identificador": 123890,
       "sentiment": {
         "ranking": 2,
         "polarity": "Positivo"
