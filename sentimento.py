@@ -226,22 +226,26 @@ def main():
 
         try:
             consumerTopic = options.crawler # Get consumer topic
-            if len(args) > 0:
-                producerTopic = args[0] # Get producer topic
-            if len(args) > 1:
-                groupId = args[1] # Get group id
+            producerTopic = args[0] # Get producer topic
+            brokers = args[1].split(',') # Get brokers
+            if len(args) > 2:
+                groupId = args[2] # Get group id
             else:
                 groupId = "group" + str(randint(0,100)) # Create random group id in case it is not given
+
+            print('Group ID:', groupId)
+            print('Consumer:', consumerTopic)
+            print('Producer:', producerTopic)
+            print('Brokers:', brokers)
         except Exception as e:
             print("Passagem de parâmetros incorreta. Consulte documentação para detalhes")
             return
 
-        brokers = ["hadoopdn-gsi-prod04.mpmg.mp.br:6667", "hadoopdn-gsi-prod05.mpmg.mp.br:6667", "hadoopdn-gsi-prod06.mpmg.mp.br:6667", "hadoopdn-gsi-prod07.mpmg.mp.br:6667", "hadoopdn-gsi-prod08.mpmg.mp.br:6667", "hadoopdn-gsi-prod09.mpmg.mp.br:6667", "hadoopdn-gsi-prod10.mpmg.mp.br:6667"]
+        # brokers = ["hadoopdn-gsi-prod04.mpmg.mp.br:6667", "hadoopdn-gsi-prod05.mpmg.mp.br:6667", "hadoopdn-gsi-prod06.mpmg.mp.br:6667", "hadoopdn-gsi-prod07.mpmg.mp.br:6667", "hadoopdn-gsi-prod08.mpmg.mp.br:6667", "hadoopdn-gsi-prod09.mpmg.mp.br:6667", "hadoopdn-gsi-prod10.mpmg.mp.br:6667"]
         
         try:
             consumer = KafkaConsumer(consumerTopic, auto_offset_reset='latest', group_id=groupId, bootstrap_servers=brokers) # Initialize consumer
-            if len(args) > 0:
-                producer = KafkaProducer(bootstrap_servers=brokers) # Initialize producer
+            producer = KafkaProducer(bootstrap_servers=brokers) # Initialize producer
         except Exception as e:
             print(e)
             return
@@ -260,7 +264,7 @@ def main():
                             for j in message[i]:
                                 content = json.loads(j.value)
                                 print(content)
-                                if len(args) > 0:
+                                if "texto" in content:
                                     postId = content["identificador"]
                                     text = content["texto"]
                                     ranking, polarity = getSentimentResults(text)
