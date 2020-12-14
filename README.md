@@ -34,15 +34,13 @@ A segunda maneira recebe o argumento __-f__ (--file). Neste segundo caso, o prog
     
     python3 sentimento.py -f [fonte]/examplo.txt [fonte]/examplo_2.txt [fonte]/examplo_3.txt [...]
     
-Finalmente, a terceira maneira recebe o argumento __-c__ (--crawler). Este argumento foi criado especificamente para atender às necessidades de integração do módulo de sentimentos com os coletores de redes sociais. Esta chamada recebe ainda como parâmetro o tópico consumidor, produtor, e o identificador do grupo. O padrão genérico de execução é apresentado a seguir.
+Finalmente, a terceira maneira recebe o argumento __-c__ (--crawler). Este argumento foi criado especificamente para atender às necessidades de integração do módulo de sentimentos com os coletores de redes sociais. Esta chamada recebe ainda como parâmetro o tópico consumidor, produtor, um (ou uma lista) _broker_ e o identificador do grupo (opcional). O padrão genérico de execução é apresentado a seguir.
 
-    python3 sentimento.py -c consumerTopic producerTopic groupId
+    python3 sentimento.py -c consumerTopic producerTopic host1:port1,host2:port2,....,hostN:portN groupId
     
-O parâmetro do tópico consumidor é mandatório. Se o tópico produtor não for fornecido e nem o identificador do grupo informado, o programa irá se comportar apenas como um consumidor, e um identificador de grupo aleatório será utilizado. São exemplos de execução. No primeiro exemplo, M04 irá consumir do tópico _crawler_whatsapp_mensagem_ e produzir no tópico _model_analise_sentimento_whatsapp_mensagem_. O segundo caso apenas consome do primeiro tópico.
+Os três primeiros parâmetros são mandatórios. Se o identificador do grupo (quarto parâmetro) não for informado, um identificador de grupo aleatório será utilizado. Um exemplo de execução é mostrado a seguir. A partir desta execução, M04 irá consumir do tópico _crawler_telegram_mensagem_ e produzir no tópico _model_analise_sentimento_telegram_mensagem_, utilizando como _brokers_ os endereços _hadoopdn-gsi-prod04.mpmg.mp.br:6667_ e _hadoopdn-gsi-prod05.mpmg.mp.br:6667_. Um identificador de grupo aleatório é utilizado neste exemplo.
 
-    python3 sentimento.py -c crawler_whatsapp_mensagem model_analise_sentimento_whatsapp_mensagem group1
-    
-    python3 sentimento.py -c crawler_whatsapp_mensagem
+    python3 sentimento.py -c crawler_telegram_mensagem model_analise_sentimento_telegram_mensagem hadoopdn-gsi-prod04.mpmg.mp.br:6667,hadoopdn-gsi-prod05.mpmg.mp.br:6667
     
 ### Docker
 É possível encapsular todo o processo de execução em containers do Docker. A instalação e ativação ocorreu a partir da execução dos seguintes comandos.
@@ -59,13 +57,13 @@ Com o Docker ativo e o usuário dentro da pasta M04/, onde estão localizados os
 
     sudo docker-compose build
     
-Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas, por exemplo, a partir do uso dos três parâmetros distintos supracitados.
+Com a instalação finalizada, os scripts do módulo de sentimentos estarão localizados em um container que se chama "m04_sentimento_python". A utilização do coletor com o Docker se diferencia um pouco da utilização normal de scripts Python supracitados. Dessa forma, o módulo pode ser executado das seguintes formas, por exemplo, a partir do uso dos três parâmetros distintos supracitados. O parâmetro -u após python3 em um dos exemplos é apenas para não armazenar saídas do teclado em _buffer_ e sim imprimir os resultados direto na tela.   
 
     sudo docker run --rm m04_sentimento_python python3 sentimento.py -t "Estou feliz :)"
     
     sudo docker run -v /datalake/ufmg/:/datalake/ufmg/ --rm m04_sentimento_python python3 sentimento.py -f /datalake/ufmg/m04/input/exemplo_input.txt
     
-    sudo docker run --rm m04_sentimento_python python3 sentimento.py -c model_analise_sentimento_instagram_comentario model_analise_sentimento_instagram_post group1
+    sudo docker run --rm m04_sentimento_python python3 -u sentimento.py -c crawler_telegram_mensagem model_analise_sentimento_telegram_mensagem hadoopdn-gsi-prod04.mpmg.mp.br:6667,hadoopdn-gsi-prod05.mpmg.mp.br:6667
     
 ## Saídas
 O módulo executado com o argumento __-t__ retorna diretamente no _console_ a conotação encontrada (_ranking_) e a polaridade (_polarity_) baseada na conotação (_Muito Negativo, Negativo, Neutro, Positivo, Muito Positivo_) para a sentença requerida. O resultado do processametno dos outros argumentos são armazenados dentro no diretório _/datalake/ufmg/m04/_ .
